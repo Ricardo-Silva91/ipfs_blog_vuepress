@@ -28,6 +28,6 @@ module.exports = (themeConfig, ctx) => {
   siteConfig.postcss = { ...(siteConfig.postcss || {}), plugins }
 
   return {
-    plugins: [],
+    globalLayout: './layouts/GlobalLayout',
   }
 }
