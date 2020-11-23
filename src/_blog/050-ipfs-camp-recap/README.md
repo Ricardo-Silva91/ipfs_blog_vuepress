@@ -63,7 +63,7 @@ Catch up on all the artefacts at 📒 [https://github.com/ipfs/camp#-unconf](htt
 
 And it was a blast. Here is a quick video recap as a souvenir for everyone that was there, and a postcard for everyone that didn't get a chance this time around:
 
-[![](/img/060-ipfs-camp-recap/ipfs-camp-youtube-preview.jpg)](https://youtu.be/kc_dxO-V8YM)
+[![](./ipfs-camp-youtube-preview.jpg)](https://youtu.be/kc_dxO-V8YM)
 
 However, the IPFS Camp spirit doesn't stop here, now it is all about continuing the dialog that got started and taking all the learnings and materials to local IPFS Communities, showing and teaching more folks how to build on the P2P Web. All the content produced can be found in the IPFS Camp Repo -- http://github.com/ipfs/camp. We will be posting all the recordings soon as well.
 
@@ -74,7 +74,7 @@ Last, but definitely not the least, a huge THANK YOU ❤️ to everyone that con
 - An outstanding [Production Team](https://camp.ipfs.io/team) that created the phenomenal experience for everyone
 - The over 4000 IPFS Community members that have been building this project with us since the beginning
 
-[![](https://media.giphy.com/media/mGW5xq4SwlqnSTxwtb/giphy.gif)](/img/060-ipfs-camp-recap/camp-gif.gif)
+[![](https://media.giphy.com/media/mGW5xq4SwlqnSTxwtb/giphy.gif)](./camp-gif.gif)
 
 On behalf of the whole IPFS Project, thank you all for being part of this project and community, such an ambitious goal couldn't be achieved without all your energy, passion and dedication to make it happen. Onwards!
 

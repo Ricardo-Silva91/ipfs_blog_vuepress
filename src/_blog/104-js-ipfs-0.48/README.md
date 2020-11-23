@@ -205,7 +205,7 @@ See the API Changes section below for the full rundown.
 
 ## Core API & HTTP API Client
 
-- `ipfs.add` only works on single items - a Uint8Array, a String, an AsyncIterable<Uint8Array> etc
+- `ipfs.add` only works on single items - a Uint8Array, a String, an AsyncIterable\<Uint8Array\> etc
 - `ipfs.addAll` works on multiple items
 - `ipfs.bitswap.wantlist([peer], [options])` is split into:
   - `ipfs.bitswap.wantlist([options])`

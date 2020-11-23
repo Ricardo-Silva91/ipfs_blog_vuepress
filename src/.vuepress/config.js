@@ -60,7 +60,7 @@ module.exports = {
     ],
     [require('./plugins/pageData'), { authors }],
     [require('./plugins/vuepress-plugin-trigger-scroll')],
-    [require('./plugins/vuepress-plugin-ga-dnt'), { ga: 'UA-96910779-1' }],
+    // [require('./plugins/vuepress-plugin-ga-dnt'), { ga: 'UA-96910779-1' }],
     ['vuepress-plugin-img-lazy'],
     [
       '@vuepress/blog',
@@ -98,7 +98,7 @@ module.exports = {
               description: 'The latest from Protocol Labs',
             },
             pagination: {
-              lengthPerPage: 100,
+              lengthPerPage: 20,
             },
           },
         ],

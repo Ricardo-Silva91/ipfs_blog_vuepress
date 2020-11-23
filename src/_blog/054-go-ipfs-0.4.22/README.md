@@ -10,7 +10,7 @@ author: Steven Allen
 
 The IPFS network has scaled to the point where small changes can have a wide-reaching impact on the entire network. To keep this situation from escalating, we've put a hold on releasing new features until we can improve our [release process](https://github.com/ipfs/go-ipfs/blob/master/docs/releases.md) (which we've trialed in this release) and [testing procedures](https://github.com/ipfs/go-ipfs/issues/6483).
 
-You can read more about the new release process in the [release process blog post]({{< relref "051-new-ipfs-release-process.md" >}}).
+You can read more about the new release process in the [release process blog post](/blog/2019-08-14-ipfs-release-process/).
 
 This release includes fixes for the following regressions:
 

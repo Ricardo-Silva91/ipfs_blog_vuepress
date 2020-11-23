@@ -99,7 +99,9 @@ Get started using our [guide repo](https://github.com/obsidiansystems/ipfs-nix-g
 Finally, we recently did an interview on the [Nix Friday](https://zimbatm.com/NixFriday/) stream going over all our work, and also discussing more broadly how we see the IPFS and Nix ecosystems fitting together.
 You can watch a recording [here](https://www.youtube.com/watch?v=FievtzvDbs82):
 
-{{< youtube FievtzvDbs8 >}}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/FievtzvDbs8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 
 ## What’s Next?
 

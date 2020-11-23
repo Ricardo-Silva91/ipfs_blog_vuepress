@@ -37,7 +37,7 @@ It's usually not a good idea to run a public-facing service as root. So we'll cr
 
 ## Adding content to IPFS
 
-{{< asciinema id="player-container" data="asciicast-85339.json" width="88" height="50" >}}
+<!-- {{< asciinema id="player-container" data="asciicast-85339.json" width="88" height="50" >}} -->
 
 First let's initialize the IPFS config:
 

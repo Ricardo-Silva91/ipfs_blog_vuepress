@@ -6,7 +6,9 @@ description:
 author: Arkadiy Kukarkin
 ---
 
-{{< youtube D_4H8gz_9MU >}}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/D_4H8gz_9MU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 _Welcome to the Sci-Fi Fair!_
 
 Hot on the heels of IPFS Camp videos covering [lightning talks](https://github.com/ipfs/camp#%EF%B8%8F-lightning-talks), [deep dives](https://github.com/ipfs/camp#-deep-dives), [poster projects](https://github.com/ipfs/camp#-poster-projects) and [core + elective courses](https://github.com/ipfs/camp#-core--elective-courses) come the **interviews from our [sci-fi fair](https://github.com/ipfs/camp#-sci-fi-fair)**.
@@ -19,14 +21,18 @@ See the complete-ish (we had quite a few guerilla participants!) [list of Fair p
 
 ### Textile
 
-{{< youtube 34lVgp1snvg >}}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/34lVgp1snvg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 _The Textile team demonstrates their interactive wares_
 
 Long-time IPFS community members [Textile](https://textile.io) brought their crowd favorite p2p photobooth, as well as a game of cryptographically verified [Interplanetary Tag](https://medium.com/textileio/building-peer-to-peer-games-on-ipfs-a-look-at-interplanetary-tag-52d081ee1d32) (or arguably Interplanetary Assassin)
 
 ### RPi Cluster
 
-{{< youtube 7pFf5gUnQ24 >}}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/7pFf5gUnQ24" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 _Hector explains the topology of the RPi cluster (feat. many blinkenlights)_
 
 Hector and the rest of the [IPFS Cluster](https://cluster.ipfs.io) team came through with a project high in fun, fabric, and blinking lights: the Raspberry Pi IPFS Cluster. Six tiny but mighty (and lovingly upholstered) nodes tirelessly worked together to pin whatever CIDs were thrown at them and reported their pinset load through an ingenious hardware display. Not pictured: [@cluster-labs'](https://github.com/cluster-labs) [Horizon UI for IPFS Cluster](https://medium.com/towardsblockchain/we-made-a-dashboard-for-ipfs-clusters-and-now-we-want-you-to-check-it-out-a87234629908) giving fair attendees even more fine-grained insights into the pinset.
@@ -38,7 +44,9 @@ _[Alex Potsides’s](https://github.com/achingbrain) npm-in-a-box project_
 
 ### MetaMask's Network Visualizer
 
-{{< youtube 7HDVgjQnNdM >}}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/7HDVgjQnNdM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 _[kumavis](https://github.com/kumavis) shows off the live network visualizer_
 
 The [MetaMask](https://metamask.io) crew brought a tool that proved invaluable in their network connectivity diagnostics: a DHT visualizer. Following some wireless network trouble (a real-world scenario to be sure), we were treated to some beautiful visualizations of network connectivity.

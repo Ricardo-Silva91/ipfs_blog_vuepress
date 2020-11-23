@@ -35,7 +35,9 @@ In theory, the DHT should make finding, providing, and fetching data among nodes
 
 The IPFS Public Network experienced substantial growth last year, quickly scaling 30x, with **hundreds of thousands of nodes** now participating in the network! Major software deployments and new decentralized apps came on board with expectations for a production-ready network with the reliability and performance to match. Many were using IPFS as a decentralized CDN (Content Delivery Network) to share and find content across the network. Unfortunately, due to a proliferation of new nodes unable to route peers to the desired content, the network was letting some of these users down.
 
-{{< youtube jpQnQbfhuBc >}}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/jpQnQbfhuBc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 <br />
 
 In early 2019, we started to hear rumblings around content routing issues, which were exacerbated as more and more nodes joined the network over Q1 and Q2 - many of them behind home firewalls or NATs. We were constantly bootstrapping and patching the network to remedy performance and reliability issues. But, we couldn’t really test the efficacy (or truly diagnose any regressions) of these patches until they were _in production_, making it hard to iterate and try out larger fixes to network configuration.
@@ -74,7 +76,9 @@ With the [launch of Testground v0.5](https://blog.ipfs.io/2020-05-06-launching-t
 
 With Testground, we were able to benchmark and quantify our DHT issues around peer availability, query termination, and routing table maintenance. We started with simulations of the existing network - showing how our previous query logic interacted with evolving network parameters, like many nodes being undialable.
 
-{{< youtube S8a1xzdWjN0 >}}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/S8a1xzdWjN0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 <br />
 
 Testground allowed us to tweak these parameters to measure which changes would have the most impact on network performance. As we gathered for a Research Summit in January to compare potential mitigations to the ongoing network challenges, we were now empowered with a **quantitative** understanding of the network structure and the tools to immediately prototype and test out the resulting hypotheses from our discussions.

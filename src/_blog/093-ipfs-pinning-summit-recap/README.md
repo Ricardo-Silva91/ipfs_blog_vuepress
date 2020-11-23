@@ -16,7 +16,10 @@ The first-ever [IPFS Pinning Summit](https://ipfspinningsummit.com/) brought tog
 
 Day 1 focused on the accelerating growth of the IPFS ecosystem - especially the adoption and improvement of IPFS tooling and support for verticals like Web3 applications, DevOps pipelines, and Large Data on IPFS. The day also included presentations from major IPFS pinning services like [Infura](https://infura.io/) and [Pinata](https://pinata.cloud/), tools smoothing the IPFS upgrade UX like [Fleek](https://fleek.co/) and [UnstoppableDomains](https://unstoppabledomains.com/), and applications building on top of IPFS with strong use cases for IPFS infrastructure and tooling like [Ceramic](https://www.ceramic.network/), [Ucam](https://ucam.iotex.io/), and [Filecoin](https://filecoin.io/).
 
-{{< youtube rYD2lfuatJM >}}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/rYD2lfuatJM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
 <br />
 
 **IPFS Project Lead [Molly Mackinlay](https://github.com/momack2)** called the next 18 months a “critical period” for the IPFS community. “There are lots of key applications and projects being built, improving the ecosystem, and all kinds of developer tools are arriving that are transforming how applications and users of IPFS end up using the system,” Mackinlay said. “All of these developer tools and systems are changing the nature of how people store and move data.”
@@ -30,7 +33,9 @@ The Summit also welcomed a host of IPFS collaborators to the stage, who demoed t
 - **[Pinata](https://pinata.cloud/) CEO Kyle Tut** dove deep into data permanence and discussed how to keep the data behind a CID alive. Likening data preservation to the responsibility artists have to maintain their own work, Tut asked “Is Da Vinci responsible for maintaining the Mona Lisa? And the answer to that is, no! Da Vinci is no longer with us, the painting is something like over 500 years old, and the person or the body that takes care of that painting today is the Louvre Museum.” Similarly, ownership of digital data, Tut argued, can transfer as a token, from one wallet to another. It’s the file owner’s responsibility to pin that data on a network like IPFS to make sure it’s secure. [Watch the video](https://www.youtube.com/watch?v=RB884S2k59A).
 
 <br />
-{{< youtube Tnn3QJN4dec >}}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/Tnn3QJN4dec" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 <br />
 
 Day 2 focused on the future - with **Juan Benet**, creator of IPFS & Filecoin, highlighting new opportunities and improvements coming to the space, including a unified IPFS Pinning API, deeper integration of network services into IPFS tools like [IPFS-Desktop](https://github.com/ipfs-shipyard/ipfs-desktop) and [WebUI](https://github.com/ipfs-shipyard/ipfs-webui), and new capabilities like [Powergate](https://blog.textile.io/filecoin-developer-tools-concepts/) to bring Filecoin persistence to IPFS pinning services.
@@ -39,7 +44,9 @@ The IPFS Pinning Summit brought together 100+ participants for product demos, de
 
 Presentations also explored new opportunities related to the upcoming Filecoin Network launch - which adds an incentive layer to distributed data storage in IPFS. Filecoin Leads **Pooja Shah** and **Juan Benet** [shared a number of new ways to integrate Filecoin](https://www.youtube.com/watch?v=Q0oe6i7d1u4) to augment and enhance existing web3 infrastructure - like using Textile's Powergate to create Filecoin-backed IPFS Pinning Services.
 
-{{< youtube aiOTSkz_6aY >}}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/aiOTSkz_6aY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 <br />
 
 Watch all of the sessions [here](https://www.youtube.com/playlist?list=PLuhRWgmPaHtTvsxuZ9T-tMlu_v0lja6v5), including lightning talks on [Filecoin’s GUI](https://www.youtube.com/watch?v=dMuVDELUdnE), [Git on Threads](https://www.youtube.com/watch?v=dx7TH7-YSEQ), the [Filecoin Discover Project](https://www.youtube.com/watch?v=UXmQfnwzhtQ&feature=youtu.be), and many more.
