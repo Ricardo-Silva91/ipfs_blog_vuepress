@@ -5,7 +5,7 @@ translationKey: ipfs-weekly-110
 tags: weekly
 header_image: weekly-newsletter.png
 title: Welcome to IPFS Weekly 110
-description:
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut pulvinar. Nunc blandit nisi. Nam pulvinar augue nibh, sit amet varius magna egestas ac.
 author: Jenn Turner
 ---
 

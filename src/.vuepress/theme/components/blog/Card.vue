@@ -1,6 +1,6 @@
 <template>
   <router-link
-    class="card-post group bg-white rounded overflow-hidden flex flex-col transform hover:scale-105 duration-100 ease-in-out"
+    class="card-post group bg-gray-light rounded overflow-hidden flex flex-col transform hover:scale-105 duration-300 ease-in-out"
     itemprop="mainEntityOfPage"
     :to="path"
   >
@@ -9,26 +9,29 @@
       itemscope
       itemtype="https://schema.org/BlogPosting"
     >
-      <div class="cover embed-responsive embed-responsive-og bg-gradient-5">
+      <div class="cover embed-responsive embed-responsive-og">
         <router-link :to="path" class="embed-responsive-item">
           <LazyImage
-            v-if="frontmatter.image"
-            class="transform duration-500 ease-in-out group-hover:scale-105"
+            class="h-full p-2"
+            img-class="h-full"
             itemprop="image"
             :alt="title"
-            src-placeholder="/images/blog/og/default.png"
-            :src="frontmatter.image"
+            :src="`/header_images/${
+              frontmatter.header_image
+                ? frontmatter.header_image
+                : 'blog-placeholder.png'
+            }`"
             :ctx="regularPath"
           />
         </router-link>
       </div>
-      <div class="p-8 flex flex-grow flex-col">
+      <div class="pt-1 pb-4 px-4 flex flex-grow flex-col">
         <header>
           <h1 class="type-h5 font-bold text-primary hover:underline">
             {{ title }}
           </h1>
         </header>
-        <div class="my-4">
+        <div>
           <PostMeta
             :author="frontmatter.author"
             :date="frontmatter.date"
@@ -68,9 +71,11 @@ export default {
       type: Object,
       default: () => ({}),
       validator: function (frontmatter) {
-        return frontmatter.description
-          ? frontmatter.description.length <= 200
-          : true
+        if (frontmatter.description && frontmatter.description.length > 200) {
+          return false
+        }
+
+        return true
       },
     },
     regularPath: {

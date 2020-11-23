@@ -32,7 +32,7 @@ module.exports = {
     },
   },
   themeConfig: {
-    dateFormat: 'MMM DD, YYYY',
+    dateFormat: 'DD MMMM YYYY',
     socialLinks: [],
     footerLinks: [],
     footerLegal: '',
@@ -60,7 +60,7 @@ module.exports = {
     ],
     [require('./plugins/pageData'), { authors }],
     [require('./plugins/vuepress-plugin-trigger-scroll')],
-    // [require('./plugins/vuepress-plugin-ga-dnt'), { ga: 'UA-96910779-1' }],
+    // [require('./plugins/vuepress-plugin-ga-dnt'), { ga: 'UA-xxxxxx' }],
     ['vuepress-plugin-img-lazy'],
     [
       '@vuepress/blog',
@@ -98,7 +98,7 @@ module.exports = {
               description: 'The latest from Protocol Labs',
             },
             pagination: {
-              lengthPerPage: 20,
+              lengthPerPage: Number.MAX_SAFE_INTEGER,
             },
           },
         ],

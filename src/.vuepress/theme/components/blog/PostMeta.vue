@@ -1,9 +1,13 @@
 <template>
   <div class="flex items-center">
     <!-- <PostAuthor v-if="author && author.name" v-bind="author" /> -->
-    <span class="mx-1">·</span>
     <div v-if="date">
-      <time pubdate itemprop="datePublished" :datetime="date">
+      <time
+        class="italic opacity-50"
+        pubdate
+        itemprop="datePublished"
+        :datetime="date"
+      >
         {{ resolvedDate }}
       </time>
     </div>

@@ -5,7 +5,7 @@
       :component-index="0"
       :background="{ type: 'gradient', gradient: 'bg-gradient-3' }"
     />
-    <div class="pt-8">
+    <div class="pt-8 bg-white">
       <RSSSubscription class="flex justify-end grid-margins" />
       <div
         class="grid-margins pt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
@@ -15,10 +15,6 @@
         <Card
           v-for="page in publicPages"
           :key="page.key"
-          v-transition="{
-            transition: 'transformY',
-            delay: `${delayVal()}s`,
-          }"
           class="mb-4"
           v-bind="page"
         />
