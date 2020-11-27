@@ -1,6 +1,8 @@
 <template>
-  <li class="post-tag">
-    <router-link :to="'/tag/' + tag"> {{ tag }} </router-link>
+  <li class="post-tag p-1 mr-1 bg-white text-blueGreen hover:underline rounded">
+    <router-link :to="{ path: '/', query: { tags: tag } }">
+      {{ tag }}
+    </router-link>
   </li>
 </template>
 

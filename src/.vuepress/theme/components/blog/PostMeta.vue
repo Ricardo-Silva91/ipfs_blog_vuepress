@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center">
+  <div class="flex flex-col">
     <!-- <PostAuthor v-if="author && author.name" v-bind="author" /> -->
     <div v-if="date">
       <time
@@ -11,7 +11,7 @@
         {{ resolvedDate }}
       </time>
     </div>
-    <ul v-if="false" class="tags" itemprop="keywords">
+    <ul v-if="resolvedTags.length" class="tags flex mt-1" itemprop="keywords">
       <PostTag v-for="tag in resolvedTags" :key="tag" :tag="tag" />
     </ul>
   </div>
@@ -50,7 +50,10 @@ export default {
     },
     resolvedTags() {
       if (!this.tags || Array.isArray(this.tags)) return this.tags
-      return [this.tags]
+      return this.tags
+        .replaceAll(', ', ',')
+        .split(',')
+        .filter((tag) => tag)
     },
   },
 }

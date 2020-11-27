@@ -1,12 +1,18 @@
 <template>
   <Layout>
-    <Section
-      :title="$frontmatter.description"
-      :component-index="0"
-      :background="{ type: 'gradient', gradient: 'bg-gradient-3' }"
-    />
+    <div class="bg-gradient-6 py-20 text-white">
+      <div class="grid-margins">
+        <h1 class="type-h1">
+          {{ $frontmatter.description }}
+        </h1>
+        <h2 class="mt-8 pr-40 type-h4">
+          All the up-to-date IPFS info you need in one place, from blog posts
+          and release notes to videos, tutorials, news coverage, and events.
+        </h2>
+      </div>
+    </div>
     <div class="pt-8 bg-white">
-      <RSSSubscription class="flex justify-end grid-margins" />
+      <SortAndFilter :number-of-posts="publicPages.length" />
       <div
         class="grid-margins pt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
         itemscope
@@ -27,37 +33,52 @@
           >Next</router-link
         >
       </div>
+      <NewsletterForm />
     </div>
   </Layout>
 </template>
 
 <script>
 import Layout from '@theme/layouts/Layout.vue'
-import Section from '@theme/components/Section.vue'
-import RSSSubscription from '@theme/components/RSSSubscription.vue'
 
 import Card from '@theme/components/blog/Card'
+import SortAndFilter from '@theme/components/blog/SortAndFilter'
+import NewsletterForm from '@theme/components/blog/NewsletterForm'
 
 export default {
   name: 'BlogIndex',
   components: {
-    Layout,
-    Section,
     Card,
-    RSSSubscription,
+    Layout,
+    SortAndFilter,
+    NewsletterForm,
   },
   data: function () {
     return {
+      numberOfPagesToShow: 20,
       delayValues: [0, 0.15, 0.3],
     }
   },
   computed: {
+    activeTags() {
+      return (this.$route.query.tags || '').split(',')
+    },
     publicPages: function () {
-      return this.$pagination.pages.filter(
-        (page) =>
+      return this.$pagination.pages.filter((page) => {
+        for (let i = 0; i < this.activeTags.length; i++) {
+          if (
+            !page.frontmatter.tags ||
+            !page.frontmatter.tags.includes(this.activeTags[i])
+          ) {
+            return false
+          }
+        }
+
+        return (
           page.frontmatter &&
           (page.frontmatter.sitemap ? !page.frontmatter.sitemap.exclude : true)
-      )
+        )
+      })
     },
   },
   methods: {

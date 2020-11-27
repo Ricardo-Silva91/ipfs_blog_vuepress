@@ -60,10 +60,12 @@ const theme = {
       webBlue: '#156FF7',
       deepBlue: '#002256',
       plBlack: '#16161F',
+      blueGreen: '#3e9096',
       gray: {
         dark: '#707175',
         default: '#d1d1d6',
         light: '#f5f6f7',
+        pale: '#edf0f4',
       },
     },
     borderColor: {

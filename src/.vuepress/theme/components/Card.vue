@@ -10,7 +10,7 @@
     >
       <p v-if="category" class="type-p1 flex-grow">{{ category }}</p>
       <div class="card__content-wrapper">
-        <p v-if="eyebrow" class="type-p3 text-gray-light mb-3 md:mb-4">
+        <p v-if="eyebrow" class="type-p3 text-gray-pale mb-3 md:mb-4">
           {{ eyebrow }}
         </p>
         <h3 v-if="heading" class="type-h3 mb-4 md:mb-10">

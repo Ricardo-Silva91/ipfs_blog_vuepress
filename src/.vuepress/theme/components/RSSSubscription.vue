@@ -2,7 +2,7 @@
   <div>
     <a
       class="rss-link flex items-center text-gray-dark transition-filter duration-700 ease-in-out"
-      href="/rss.xml"
+      href="/index.xml"
       rel="noopener noreferrer"
     >
       <SVGIcon
@@ -10,7 +10,6 @@
         name="rss"
         title="rss"
       />
-      <h3 class="text-webBlue text-sm">Available as RSS</h3>
     </a>
   </div>
 </template>

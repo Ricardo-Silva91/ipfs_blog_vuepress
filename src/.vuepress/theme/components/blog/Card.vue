@@ -1,6 +1,6 @@
 <template>
-  <router-link
-    class="card-post group bg-gray-light rounded overflow-hidden flex flex-col transform hover:scale-105 duration-300 ease-in-out"
+  <div
+    class="card-post group bg-gray-pale rounded overflow-hidden flex flex-col transform hover:scale-105 duration-300 ease-in-out"
     itemprop="mainEntityOfPage"
     :to="path"
   >
@@ -26,11 +26,11 @@
         </router-link>
       </div>
       <div class="pt-1 pb-4 px-4 flex flex-grow flex-col">
-        <header>
+        <router-link :to="path">
           <h1 class="type-h5 font-bold text-primary hover:underline">
             {{ title }}
           </h1>
-        </header>
+        </router-link>
         <div>
           <PostMeta
             :author="frontmatter.author"
@@ -50,7 +50,7 @@
         </footer>
       </div>
     </article>
-  </router-link>
+  </div>
 </template>
 
 <script>

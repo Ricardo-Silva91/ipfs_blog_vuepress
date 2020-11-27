@@ -6,16 +6,17 @@ const CANONICAL_BASE = process.env.CANONICAL_BASE || ''
 const IPFS_DEPLOY = process.env.IPFS_DEPLOY === 'true' || false
 
 module.exports = {
-  title: 'Protocol Labs',
-  description: 'Protocol Labs is building the next generation of the internet.',
+  title: 'IPFS Blog',
+  description:
+    'This is the IPFS Starlog, a series of communications about the IPFS Project.',
   domain: CANONICAL_BASE,
   authors,
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'Protocol Labs',
+      title: 'IPFS Blog',
       description:
-        'Protocol Labs is building the next generation of the internet.',
+        'This is the IPFS Starlog, a series of communications about the IPFS Project.',
     },
   },
   head: require('./config/head'),
@@ -95,7 +96,8 @@ module.exports = {
             itemLayout: 'BlogPost',
             frontmatter: {
               title: 'Blog',
-              description: 'The latest from Protocol Labs',
+              description:
+                'This is the IPFS Starlog, a series of communications about the IPFS Project.',
             },
             pagination: {
               lengthPerPage: Number.MAX_SAFE_INTEGER,

@@ -16,6 +16,9 @@ module.exports = plugin(function ({ addUtilities }) {
     '.bg-gradient-5': {
       background: 'linear-gradient(287.44deg, #2166cd 10.18%, #0819ae 100%)',
     },
+    '.bg-gradient-6': {
+      background: 'linear-gradient(to bottom,#041727 0,#062b3f 100%)',
+    },
   }
 
   addUtilities(newUtilities, ['responsive', 'hover'])
