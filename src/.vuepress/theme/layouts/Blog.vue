@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="pt-8 bg-white">
-      <SortAndFilter :number-of-posts="publicPages.length" />
+      <SortAndFilter :number-of-posts="publicPages.length" :tags="tags" />
       <div
         class="grid-margins pt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
         itemscope
@@ -44,6 +44,7 @@ import Layout from '@theme/layouts/Layout.vue'
 import Card from '@theme/components/blog/Card'
 import SortAndFilter from '@theme/components/blog/SortAndFilter'
 import NewsletterForm from '@theme/components/blog/NewsletterForm'
+import { getTags } from '@theme/util/tagUtils'
 
 export default {
   name: 'BlogIndex',
@@ -57,11 +58,15 @@ export default {
     return {
       numberOfPagesToShow: 20,
       delayValues: [0, 0.15, 0.3],
+      tags: [],
     }
   },
   computed: {
     activeTags() {
       return (this.$route.query.tags || '').split(',')
+    },
+    searchedText() {
+      return (this.$route.query.search || '').split(',')
     },
     publicPages: function () {
       return this.$pagination.pages.filter((page) => {
@@ -74,12 +79,21 @@ export default {
           }
         }
 
+        for (let i = 0; i < this.searchedText.length; i++) {
+          if (!page.frontmatter.title.includes(this.searchedText[i])) {
+            return false
+          }
+        }
+
         return (
           page.frontmatter &&
           (page.frontmatter.sitemap ? !page.frontmatter.sitemap.exclude : true)
         )
       })
     },
+  },
+  mounted() {
+    this.tags = getTags(this.publicPages)
   },
   methods: {
     delayVal: function () {
