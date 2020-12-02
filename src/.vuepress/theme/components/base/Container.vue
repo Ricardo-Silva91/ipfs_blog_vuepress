@@ -6,13 +6,11 @@
 
 <script>
 // Add as needed
-import CardList from '@theme/components/CardList.vue'
 import Column from '@theme/components/base/Column.vue'
 import TextBlock from '@theme/components/TextBlock.vue'
 export default {
   name: 'Container',
   components: {
-    CardList,
     Column,
     TextBlock,
   },

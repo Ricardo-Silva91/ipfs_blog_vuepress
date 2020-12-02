@@ -50,8 +50,9 @@ export default {
     },
     resolvedTags() {
       if (!this.tags || Array.isArray(this.tags)) return this.tags
+
       return this.tags
-        .replaceAll(', ', ',')
+        .replace(/, /g, ',')
         .split(',')
         .filter((tag) => tag)
     },

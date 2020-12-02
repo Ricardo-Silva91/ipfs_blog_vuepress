@@ -73,10 +73,8 @@
 
 <script>
 import BackgroundVideo from '@theme/components/base/BackgroundVideo.vue'
-import CardList from '@theme/components/CardList.vue'
 import ColumnText from '@theme/components/ColumnText.vue'
 import Section from '@theme/components/Section.vue'
-import Stats from '@theme/components/Stats.vue'
 import Column from '@theme/components/base/Column.vue'
 import Container from '@theme/components/base/Container.vue'
 import LazyImage from '@theme/components/base/LazyImage.vue'
@@ -86,13 +84,11 @@ export default {
   name: 'Section',
   components: {
     BackgroundVideo,
-    CardList,
     ColumnText,
     Column,
     Container,
     LazyImage,
     Section,
-    Stats,
     TextBlock,
   },
   props: {
