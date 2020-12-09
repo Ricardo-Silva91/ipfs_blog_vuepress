@@ -1,7 +1,7 @@
 {
-  "name": "vuepress-starter",
-  "version": "1.1.0",
-  "description": "",
+  "name": "ipfs-blog",
+  "version": "1.0.0",
+  "description": "ipfs blog",
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
@@ -12,8 +12,6 @@
     "lint:styles": "stylelint \"**/*.css\" \"src/.vuepress/**/*.css\" --fix"
   },
   "keywords": [],
-  "author": "Chris Waring <chris@wwaves.co>",
-  "license": "MIT",
   "prettier": {
     "semi": false,
     "singleQuote": true
