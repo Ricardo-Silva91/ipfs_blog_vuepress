@@ -2,6 +2,10 @@ export const getTags = (posts) => {
   const tags = []
 
   posts.forEach((post) => {
+    if (!post.frontmatter.tags) {
+      return
+    }
+
     const postTags = post.frontmatter.tags.replaceAll(', ', ',').split(',')
 
     for (let i = 0; i < postTags.length; i++) {

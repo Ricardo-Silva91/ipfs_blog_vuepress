@@ -37,8 +37,22 @@ module.exports = {
     socialLinks: [],
     footerLinks: [],
     footerLegal: '',
-    headerLinks: [],
-    mobileNavLinks: [],
+    headerLinks: [
+      { text: 'About', link: 'https://ipfs.io/#why' },
+      { text: 'Install', link: 'https://ipfs.io/#install' },
+      { text: 'Docs', link: 'https://docs.ipfs.io/' },
+      { text: 'Team', link: 'https://ipfs.io/team' },
+      { text: 'Blog', link: '/' },
+      { text: 'Help', link: 'https://ipfs.io/help' },
+    ],
+    mobileNavLinks: [
+      { text: 'About', link: 'https://ipfs.io/#why' },
+      { text: 'Install', link: 'https://ipfs.io/#install' },
+      { text: 'Docs', link: 'https://docs.ipfs.io/' },
+      { text: 'Team', link: 'https://ipfs.io/team' },
+      { text: 'Blog', link: '/' },
+      { text: 'Help', link: 'https://ipfs.io/help' },
+    ],
   },
   plugins: [
     ['@vuepress/last-updated'],
@@ -91,7 +105,7 @@ module.exports = {
             id: 'blog',
             dirname: '_blog',
             path: '/',
-            itemPermalink: '/blog/:slug',
+            itemPermalink: '/:slug',
             layout: 'Blog',
             itemLayout: 'BlogPost',
             frontmatter: {

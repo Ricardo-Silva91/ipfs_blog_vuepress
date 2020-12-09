@@ -1,8 +1,9 @@
 <template>
   <Layout>
     <div class="bg-gradient-6 py-20 text-white">
-      <div class="grid-margins">
-        <h1 class="type-h1">
+      <div class="grid-margins mt-8">
+        <Breadcrumbs :crumbs="breadcrumbs" />
+        <h1 class="type-h1 mt-4">
           {{ $frontmatter.description }}
         </h1>
         <h2 class="mt-8 pr-40 type-h4">
@@ -22,7 +23,7 @@
           v-for="page in publicPages"
           :key="page.key"
           class="mb-4"
-          v-bind="page"
+          :card="page"
         />
       </div>
       <div>
@@ -44,13 +45,18 @@ import Layout from '@theme/layouts/Layout.vue'
 import Card from '@theme/components/blog/Card'
 import SortAndFilter from '@theme/components/blog/SortAndFilter'
 import NewsletterForm from '@theme/components/blog/NewsletterForm'
+import Breadcrumbs from '@theme/components/Breadcrumbs'
 import { getTags } from '@theme/util/tagUtils'
+import { parseProtectedPost } from '@theme/util/blogUtils'
+
+const protectedCardTypes = ['newslinks']
 
 export default {
   name: 'BlogIndex',
   components: {
     Card,
     Layout,
+    Breadcrumbs,
     SortAndFilter,
     NewsletterForm,
   },
@@ -59,6 +65,10 @@ export default {
       numberOfPagesToShow: 20,
       delayValues: [0, 0.15, 0.3],
       tags: [],
+      breadcrumbs: [
+        { title: 'Home', link: 'https://blog.ipfs.io/', external: true },
+        { title: 'Blog & News' },
+      ],
     }
   },
   computed: {
@@ -69,7 +79,16 @@ export default {
       return (this.$route.query.search || '').split(',')
     },
     publicPages: function () {
-      return this.$pagination.pages.filter((page) => {
+      let result = []
+
+      this.$pagination.pages.forEach((page) => {
+        if (protectedCardTypes.includes(page.frontmatter.url)) {
+          console.log('protected: ', parseProtectedPost(page))
+
+          result = [...result, ...parseProtectedPost(page)]
+          return
+        }
+
         for (let i = 0; i < this.activeTags.length; i++) {
           if (
             !page.frontmatter.tags ||
@@ -85,11 +104,37 @@ export default {
           }
         }
 
-        return (
+        if (
           page.frontmatter &&
           (page.frontmatter.sitemap ? !page.frontmatter.sitemap.exclude : true)
-        )
+        ) {
+          result.push(page)
+        }
       })
+
+      return result
+
+      // return this.$pagination.pages.filter((page) => {
+      //   for (let i = 0; i < this.activeTags.length; i++) {
+      //     if (
+      //       !page.frontmatter.tags ||
+      //       !page.frontmatter.tags.includes(this.activeTags[i])
+      //     ) {
+      //       return false
+      //     }
+      //   }
+
+      //   for (let i = 0; i < this.searchedText.length; i++) {
+      //     if (!page.frontmatter.title.includes(this.searchedText[i])) {
+      //       return false
+      //     }
+      //   }
+
+      //   return (
+      //     page.frontmatter &&
+      //     (page.frontmatter.sitemap ? !page.frontmatter.sitemap.exclude : true)
+      //   )
+      // })
     },
   },
   mounted() {
