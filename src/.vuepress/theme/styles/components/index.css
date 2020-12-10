@@ -8,7 +8,6 @@
 
 @screen md {
   .grid-margins {
-    /* @apply mx-58px; */
     margin: 0 15%;
   }
 }
