@@ -26,8 +26,6 @@ export default {
         return null
       }
 
-      console.log({ c: this.card })
-
       switch (this.card.type) {
         case 'newslink':
           return NewslinkCard

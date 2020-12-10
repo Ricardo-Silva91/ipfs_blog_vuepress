@@ -5,7 +5,7 @@ title: Newslinks
 type: newslink
 data:
   - name: test
-    title: title 1
+    title: newslink to ipfs.io
     path: https://ipfs.io/
     date: 2020-10-22
     tags: weekly

@@ -34,7 +34,6 @@
           >Next</router-link
         >
       </div>
-      <NewsletterForm />
     </div>
   </Layout>
 </template>
@@ -44,7 +43,6 @@ import Layout from '@theme/layouts/Layout.vue'
 
 import Card from '@theme/components/blog/Card'
 import SortAndFilter from '@theme/components/blog/SortAndFilter'
-import NewsletterForm from '@theme/components/blog/NewsletterForm'
 import Breadcrumbs from '@theme/components/Breadcrumbs'
 import { getTags } from '@theme/util/tagUtils'
 import { parseProtectedPost } from '@theme/util/blogUtils'
@@ -58,7 +56,6 @@ export default {
     Layout,
     Breadcrumbs,
     SortAndFilter,
-    NewsletterForm,
   },
   data: function () {
     return {
@@ -73,19 +70,21 @@ export default {
   },
   computed: {
     activeTags() {
-      return (this.$route.query.tags || '').split(',')
+      const queryTags = this.$route.query.tags
+      return queryTags ? queryTags.split(',') : []
     },
     searchedText() {
-      return (this.$route.query.search || '').split(',')
+      const queryText = this.$route.query.search
+      return queryText ? queryText.split(',') : []
     },
     publicPages: function () {
       let result = []
-
       this.$pagination.pages.forEach((page) => {
         if (protectedCardTypes.includes(page.frontmatter.url)) {
-          console.log('protected: ', parseProtectedPost(page))
-
-          result = [...result, ...parseProtectedPost(page)]
+          result = [
+            ...result,
+            ...parseProtectedPost(page, this.activeTags, this.searchedText),
+          ]
           return
         }
 
@@ -99,7 +98,11 @@ export default {
         }
 
         for (let i = 0; i < this.searchedText.length; i++) {
-          if (!page.frontmatter.title.includes(this.searchedText[i])) {
+          if (
+            !page.frontmatter.title
+              .toLocaleLowerCase()
+              .includes(this.searchedText[i].toLocaleLowerCase())
+          ) {
             return false
           }
         }
@@ -113,28 +116,6 @@ export default {
       })
 
       return result
-
-      // return this.$pagination.pages.filter((page) => {
-      //   for (let i = 0; i < this.activeTags.length; i++) {
-      //     if (
-      //       !page.frontmatter.tags ||
-      //       !page.frontmatter.tags.includes(this.activeTags[i])
-      //     ) {
-      //       return false
-      //     }
-      //   }
-
-      //   for (let i = 0; i < this.searchedText.length; i++) {
-      //     if (!page.frontmatter.title.includes(this.searchedText[i])) {
-      //       return false
-      //     }
-      //   }
-
-      //   return (
-      //     page.frontmatter &&
-      //     (page.frontmatter.sitemap ? !page.frontmatter.sitemap.exclude : true)
-      //   )
-      // })
     },
   },
   mounted() {

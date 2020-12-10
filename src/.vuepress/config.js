@@ -34,7 +34,23 @@ module.exports = {
   },
   themeConfig: {
     dateFormat: 'DD MMMM YYYY',
-    socialLinks: [],
+    socialLinks: [
+      {
+        text: 'Twitter',
+        link: 'https://twitter.com/protocollabs',
+        icon: 'twitter-icon',
+      },
+      {
+        text: 'LinkedIn',
+        link: 'https://www.linkedin.com/company/protocollabs/',
+        icon: 'linkedin-icon',
+      },
+      {
+        text: 'YouTube',
+        link: 'https://www.youtube.com/ProtocolLabs/',
+        icon: 'youtube-icon',
+      },
+    ],
     footerLinks: [],
     footerLegal: '',
     headerLinks: [

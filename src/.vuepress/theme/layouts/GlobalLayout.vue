@@ -5,6 +5,7 @@
     <Transition :with-key="$page.key" appear :after-leave="leaveScroll">
       <component :is="layout" />
     </Transition>
+    <Footer v-if="shouldDisplay('footer')" />
   </main>
 </template>
 
